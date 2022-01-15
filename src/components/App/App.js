@@ -11,10 +11,9 @@ function App() {
   return (
     <div className="App">
       <SideBar />
-      <Routes >
-        <Route path="/" element={<Main hasNotes={notes.length > 0} />}>
-        <Route path="new-note" element={<NoteForm/>} />
-        </Route>
+      <Routes>
+        <Route path="/" element={<Main hasNotes={notes.length > 0} />}/>
+        <Route path="new-note" element={<Main newNote={true} />}/>
       </Routes>
     </div>
   );
