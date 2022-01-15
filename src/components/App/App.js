@@ -15,11 +15,11 @@ function App() {
       <Routes>
         <Route
           exact path="/"
-          element={ <Main children={Home} /> }
+          element={<Main children={<Home/>} />}
         />
         <Route
           path="new-note"
-          element={ <Main children={NoteForm}/> }
+          element={<Main children={<NoteForm />} />}
         />
       </Routes>
     </div>
