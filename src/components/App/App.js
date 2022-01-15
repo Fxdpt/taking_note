@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <SideBar />
       <Routes>
-        <Route exact path="/" element={<Home />}/>
+        <Route exact path="/" element={<Main />}/>
         <Route path="new-note" element={<NoteForm />}/>
       </Routes>
     </div>
