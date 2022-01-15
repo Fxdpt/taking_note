@@ -6,7 +6,7 @@ import './Main.css'
 function Main(props) {
     return (
         <div className="main">
-            {!props.hasNotes ? <Home /> : <NoteForm />}
+            {props.children}
         </div>
     )
 }
