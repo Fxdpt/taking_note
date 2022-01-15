@@ -1,0 +1,23 @@
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Main from '../Main/Main';
+import SideBar from '../SideBar/SideBar';
+import NoteForm from '../NoteForm/NoteForm';
+import './App.css';
+
+function App() {
+  const [notes, setNotes] = useState([]);
+
+  return (
+    <div className="App">
+      <SideBar />
+      <Routes >
+        <Route path="/" element={<Main hasNotes={notes} />}>
+          <Route path="new-note" element={<NoteForm/>} />
+        </Route>
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
