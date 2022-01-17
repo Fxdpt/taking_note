@@ -4,6 +4,7 @@ import Main from '../Main/Main';
 import SideBar from '../SideBar/SideBar';
 import NoteForm from '../NoteForm/NoteForm';
 import './App.css';
+import Home from '../Home/Home';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -12,8 +13,14 @@ function App() {
     <div className="App">
       <SideBar />
       <Routes>
-        <Route path="/" element={<Main hasNotes={notes.length > 0} />}/>
-        <Route path="new-note" element={<Main newNote={true} />}/>
+        <Route
+          exact path="/"
+          element={<Main children={<Home/>} />}
+        />
+        <Route
+          path="new-note"
+          element={<Main children={<NoteForm />} />}
+        />
       </Routes>
     </div>
   );

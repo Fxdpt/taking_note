@@ -4,19 +4,11 @@ import './Main.css'
 
 
 function Main(props) {
-    if (props.newNote) {
-        return (
-            <div className="main">
-                <NoteForm />
-            </div>
-        )
-    } else {
-        return (
-            <div className="main">
-                {!props.hasNotes ? <Home /> : <NoteForm />}
-            </div>
-        )
-    }
+    return (
+        <div className="main">
+            {props.children}
+        </div>
+    )
 }
 
 export default Main;
