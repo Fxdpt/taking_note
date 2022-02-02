@@ -1,0 +1,14 @@
+.note-form {
+    align-self: baseline;
+    flex: 0 0 90%
+}
+
+textarea {
+    display: flex;
+    width: 100%;
+}
+
+#note-title {
+    display: flex;
+    width: 40%;
+}
